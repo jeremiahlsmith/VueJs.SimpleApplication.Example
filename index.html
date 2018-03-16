@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <span id="test">Test</span>
+    <div id="app">
+        {{ message }}
+        <br />
+        <br />
+        <input type="checkbox" v-model="show"> Show
+        <br />
+        <transition>
+            <span v-if="show" v-bind:title="message">
+                Hover over me
+            </span>
+        </transition>
+    </div>
+
+
+    <div id="app-4">
+        <transition>
+            <ol>
+                <li v-for="todo in todos">
+                    <input type="checkbox">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </transition>
+
+        <button v-on:click="alertBox">Submit</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>
