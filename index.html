@@ -29,10 +29,15 @@
     <div id="app-4">
         <transition>
             <ol>
-                <li v-for="todo in todos">
+                <!-- <li v-for="todo in todos">
                     <input type="checkbox">
                     {{ todo.text }}
-                </li>
+                </li> -->
+                <todo-item
+                 v-for="item in todos"
+                 v-bind:todo="item"
+                 v-bind:key="item.id">
+                </todo-item>
             </ol>
         </transition>
 
