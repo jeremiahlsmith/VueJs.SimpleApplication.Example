@@ -1,6 +1,9 @@
-/* Enter and leave animations can use different */
+.active {
+    background-color:lightgreen;
+    font-weight: bold;
+}
 
-/* durations and timing functions.              */
+/* Transitions & Transformations              */
 
 .v-enter-active {
     transition: all .5s ease;

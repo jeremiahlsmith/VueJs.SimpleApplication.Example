@@ -9,7 +9,14 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!',
-    show: false
+    show: false,
+    isActive: true,
+    ok: true
+  },
+  computed:{
+    reversedMessage: function() {
+      return this.message.split('').reverse('').join('')
+    }
   }
 })
 
